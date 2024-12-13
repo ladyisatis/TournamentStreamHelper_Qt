@@ -33,7 +33,7 @@ jobs:
 
       - run: |
           sudo apt-get update
-          sudo apt-get install -y libgstreamer-plugins-base1.0-dev qt6-base-dev qt6-base-dev-tools qmake6 qt6-tools-dev-tools
+          sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev qt6-base-dev qt6-base-dev-tools qmake6 qt6-tools-dev-tools
           lrelease -version
       - run: pip install -r dependencies/requirements.txt pyinstaller
       - run: |
