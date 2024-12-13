@@ -4,7 +4,7 @@ qtpy
 requests==2.32.3
 py7zr==0.22.0
 deepdiff==8.0.1
-pyqtdarktheme-fork
+git+https://github.com/henriquegemignani/PyQtDarkTheme.git@main
 Pillow
 Flask
 flask-cors

@@ -33,11 +33,11 @@ jobs:
 
       - run: |
           sudo apt-get update
-          sudo apt-get remove libunwind-*
-          sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev qt6-base-dev qt6-base-dev-tools qmake6 qt6-tools-dev-tools
-          lrelease -version
+          sudo apt-get remove -y libunwind-*
+          sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev qt6-base-dev qt6-base-dev-tools qt6-tools-dev qmake6 qt6-tools-dev-tools
       - run: pip install -r dependencies/requirements.txt pyinstaller
       - run: |
+          pyside6-lrelease -version
           python3 src/i18n/gen_translation_files.py
           python3 src/i18n/gen_translation_binaries.py
 
